@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+            margin: 40px auto 0;
+            background: #222;
+        }
+
+        .submit {
+            display: flex;
+            width: 600px;
+            height: 20px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="500"></canvas>
+    <script>
+        let canvas = document.querySelector("canvas");
+        let cxt = canvas.getContext("2d");
+
+        let i = 0;
+        setInterval(function () {
+            i++;
+            cxt.clearRect(0, 0, 600, 400)
+            cxt.beginPath();
+            cxt.strokeStyle = "rgba(000, 000, 250)";
+            cxt.fillStyle = "blue"
+            cxt.lineWidth = "10";
+            cxt.moveTo(300,200)
+            cxt.lineTo(300,400)
+            cxt.stroke();
+            cxt.fill()
+
+
+            cxt.beginPath();
+            cxt.strokeStyle = "rgba(000, 000, 250)";
+            cxt.fillStyle = "blue"
+            cxt.arc(300, 200, 100, 0, Math.PI * 2);
+            cxt.stroke();
+            cxt.fill()
+
+            cxt.beginPath();
+            cxt.lineWidth = "1";
+            cxt.fillStyle = "red";
+            cxt.moveTo(Math.cos(Math.PI * 2 / 360 * (72 * 0 + i)) * 100 + 300, Math.sin(Math.PI * 2 / 360 * (72 * 0 + i)) * 100 + 200);
+            cxt.lineTo(Math.cos(Math.PI * 2 / 360 * (72 * 2 + i)) * 100 + 300, Math.sin(Math.PI * 2 / 360 * (72 * 2 + i)) * 100 + 200);
+            cxt.lineTo(Math.cos(Math.PI * 2 / 360 * (72 * 4 + i)) * 100 + 300, Math.sin(Math.PI * 2 / 360 * (72 * 4 + i)) * 100 + 200);
+            cxt.lineTo(Math.cos(Math.PI * 2 / 360 * (72 * 1 + i)) * 100 + 300, Math.sin(Math.PI * 2 / 360 * (72 * 1 + i)) * 100 + 200);
+            cxt.lineTo(Math.cos(Math.PI * 2 / 360 * (72 * 3 + i)) * 100 + 300, Math.sin(Math.PI * 2 / 360 * (72 * 3 + i)) * 100 + 200);
+            cxt.closePath();
+            cxt.stroke();
+            cxt.fill("evenodd")
+        }, 10)
+
+        //..
+        // cxt.fillStyle = "rgba(000,000,000,0.5)";
+        // cxt.beginPath();
+        // cxt.moveTo(300, 65);
+        // cxt.lineTo(225, 200);
+        // cxt.lineTo(375, 200);
+        // cxt.closePath();
+        // cxt.fill()
+
+        // cxt.beginPath();
+        // cxt.moveTo(225, 110);
+        // cxt.lineTo(300, 240);
+        // cxt.lineTo(375, 110);
+        // cxt.closePath();
+        // cxt.fill();
+
+
+        // cxt.beginPath();
+        // cxt.strokeStyle = "blue";
+        // cxt.moveTo(300, 60);
+        // cxt.lineTo(230, 220);
+        // cxt.lineTo(390, 120);
+        // cxt.lineTo(210, 120);
+        // cxt.lineTo(370, 220);
+        // cxt.closePath();
+        // cxt.stroke();
+        // cxt.fill("evenodd")
+    </script>
+</body>
+
+</html>
