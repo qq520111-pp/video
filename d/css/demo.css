@@ -1,0 +1,189 @@
+/*清除默认css--start*/
+body,h1,p,ul{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*清除默认css--end*/
+/*css--start*/
+body{
+    background: #222;
+}
+.box{
+    width: 100%;
+    border-top: 1px solid transparent;
+}
+.warp{
+    position: relative;
+    width: 880px;
+    overflow: hidden;
+    margin: 30px auto 0;
+    /* border:3px solid #e46f25; */
+    /* box-shadow: 0 0 10px 0 #dddddd; */
+}
+/* .round:hover{
+    cursor: pointer;
+} */
+.file-upload>label:hover{
+    cursor: pointer;
+}
+.control>div:hover{
+    cursor: pointer;
+}
+video{
+    display: block;
+    height: 495px;
+}
+.control{
+    position: absolute;
+    width: 880px;
+    height: 40px;
+    transition: all 0.5s;
+    transform: translateY(70px);
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: -40px;
+}
+.progress{
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 0;
+}
+
+.progress-btn{
+    position: absolute;
+    top:50%;
+    left:0;
+    width: 0;
+    height: 100%;
+    background: #e46f25;
+    margin-top: -2px;
+}
+.time-left,
+.time-right {
+    position: absolute;
+    display: none;
+}
+.round{
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background: #fff;
+    z-index: 10;
+}
+.play{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    width: 150px;
+    transform: translateX(-50%);
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.play>div>img{
+    width: 100%;
+}
+.backward,
+.forward,
+.play-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.backward>img{
+    transform: rotate(180deg);
+}
+div.backward,
+div.forward{
+    border-radius: 0%;
+}
+.file-upload{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 30px;
+    height:30px;
+}
+.file-upload>label{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.file-upload>label>img{
+    width: 100%;
+}
+/* .file-upload>img{
+    width:100%;
+} */
+.music-size{
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.music-size>img{
+    width: 30px;
+}
+.music-size-btn{
+    position: absolute;
+    top: 12px;
+    right:-110px;
+    width: 100px;
+    height: 6px;
+    background:#2c2c2d;
+    border-radius:3px;
+}
+.music-size-btn>span{
+    position: relative;
+    display: block;
+    width:100%;
+    height: 6px;
+    background: #e46f25;
+    border-radius:3px;
+}
+.vioce-btn{
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background: #fff;
+}
+.time{
+    position: absolute;
+    top: 5px;
+    right: 150px;
+    height:30px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+}
+.full{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 30px;
+    height:30px;
+}
+.full>img{
+    width: 100%;
+}
+/*css--end*/

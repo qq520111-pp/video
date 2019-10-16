@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/demo.css">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width:880px) {
+
+            .warp,
+            .control {
+                width: 100%;
+                background: transparent;
+            }
+
+            .progress {
+                width: 75%;
+                top: -20px;
+                height: 6px;
+            }
+
+            .round {
+                width: 14px;
+                height: 14px;
+            }
+
+            .music-size {
+                display: none;
+            }
+
+            .time {
+                display: none;
+            }
+
+            .time-left,
+            .time-right {
+                height: 20px;
+                display: block;
+                top: 3px;
+                font-size: 12px;
+                line-height: 20px;
+                transform: translate(-120%, -50%);
+                color: #fff;
+            }
+
+            .time-left {
+                left: 0;
+            }
+
+            .time-right {
+                right: 0;
+                transform: translate(120%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="warp">
+            <video width="100%" height="100%" src="video/喜羊羊与灰太狼第1集.mp4">
+                你的浏览器不支持video标签，请升级或者更换浏览器。
+            </video>
+            <div class="control">
+                <!-- 进度条 -->
+                <div class="progress">
+                    <div class="progress-btn">
+                        <div class="round"></div>
+                    </div>
+                    <!-- 移动端的时间显示 -->
+                    <div class="time-left">
+                        <span>00:00</span>
+                    </div>
+                    <div class="time-right">
+                        <span>00:00</span>
+                    </div>
+                </div>
+                <!-- 播放按钮 -->
+                <div class="play">
+                    <div class="backward"><img data-num=0 src="./images/kuaijin.png" alt=""></div>
+                    <div class="play-btn"><img data-num=1 src="./images/bofang.png" alt=""></div>
+                    <div class="forward"><img data-num=2 src="./images//kuaijin.png" alt=""></div>
+                </div>
+                <!-- 文件上传 -->
+                <div class="file-upload">
+                    <label for="file"><img src="./images/shangchuan.png" alt=""></label>
+                    <input type="file" name="" style="display:none;" id="file">
+                </div>
+                <!-- 播放器声音大小 -->
+                <div class="music-size">
+                    <img src="./images/weibiaoti1.png" class="s" alt="">
+                    <span class="music-size-btn">
+                        <span>
+                            <span class="vioce-btn"></span>
+                        </span>
+                    </span>
+                </div>
+                <!-- 时间显示 -->
+                <div class="time">
+                    <span>00:00</span>
+                    <span>/</span>
+                    <span>00:00</span>
+                </div>
+                <!-- 全屏按钮 -->
+                <div class="full">
+                    <img src="./images/quanping.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
